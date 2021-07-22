@@ -20,7 +20,7 @@ if($conn === false){
     {
         echo "<script>alert('{$show_message}');</script>";
     }
-
+  
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ if($conn === false){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACM_INFOTREK_QUIZ</title>
-    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="quizstyle1.css">
     <script src="main.js"></script>
     <!--<script type="text/javascript">
         window.history.forward();
@@ -39,12 +39,12 @@ if($conn === false){
         }
     </script>-->
     <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
-  <script>
+ <!-- <script>
     window.addEventListener('devtoolschange', function () {
       // optionally clean up all the caches and the storages for the page before the transition
       location = 'about:blank'; // Note: Called even when the Developer Tools pane is already opened on load
     });
-  </script>
+  </script>-->
   
 </head>
 <body>
@@ -52,46 +52,28 @@ if($conn === false){
           <div class="navbar">
             <div class="left">
                 <img src="quizimg/acm_logo.png" alt="" height= "50px" width ="50px" >
+               
              </div>  
+             
             <div>
                 <a href='quiz.html'>INFOTREK'21</a>
-               
+              
             </div>
-           <nav>
-                <ul id='MenuItems'>
-                   <!-- <li><a href='#'>Contact Us</a></li> -->
-                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
-                </ul>
-            </nav> 
 
-        </div>
-        <div id="login-form" class="login-page">
-            <div class="form-box">
-                <div class="bitton-box">
-                    <div id="btn"></div>
-                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button> 
-                   <!-- <button type='button'onclick='register()'class='toggle-btn'>Register</button>-->
-
-                </div>
-                <!--<form  action ="file:///C:/Users/user/Downloads/Complete%20Web%20Developement/yquiz/quiz1.php" id='login' class='input-group-login' method = "POST">-->
-                    <form  action ="submit.php" id='login' class='input-group-login' method = "POST">
+             </div>
+             <div class="form-box">
+                 <div class=log>LOG IN</div>
+                <form  action ="submit.php" id='login' class='input-group-login' method = "POST">
                     <input type='number' name="Roll_Number" class='input-field'placeholder='Roll No.' required>
                     <input type='password' name="Password" class='input-field'placeholder='Enter Password' required>
                     <input type='checkbox'class='check-box'><span>Remember Password</span>
                     <button type='submit'class='submit-btn' name="LogIn">submit</button>
                 </form>
-                <!--<form id='register' class='input-group-register'>
-                    <input type='text'class='input-field'placeholder='First Name' required>
-                    <input type='text'class='input-field'placeholder='Last Name' required>
-                    <input type='email'class='input-field'placeholder='Email Id' required>
-                    <input type='password'class='input-field'placeholder='Enter Password' required>
-                    <input type='password'class='input-field'placeholder='Confirm Password' required>
-                    <input type='checkbox'class='check-box'><span>I agree to terms and conditions</span>
-                    <button type='submit'class='submit-btn'>Register</button>
-                </form>-->
-               
-            </div>
-        </div>
+                
+             </div>
+           
+          </div>
+        
     </div>
     <script>
         var x=document.getElementById('login');

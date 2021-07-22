@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8" />
     <title>PHP Quizzer!</title>
-    <link rel="stylesheet" href="css/style1.css" type="text/css" />
+    <link rel="stylesheet" href="css/style31.css" type="text/css" />
   </head>
   <body>
     <div id="container">
@@ -35,7 +35,7 @@
         $result = mysqli_query($mysqli, $query);
         ?>
        
-	  <a href="question.php?n=1" class="start">Take Test Again</a>
+	  <a href="registration.php" class="start">SUBMIT</a>
 	     <?php session_destroy(); ?>
 	</div>
       </main>
