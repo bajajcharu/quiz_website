@@ -1,9 +1,5 @@
 <?php
   session_start();
-        // servername => localhost
-        // username => root
-        // password => empty
-        // database name => staff
         // initializing variables
 $name = "";
 $roll = "";
@@ -31,6 +27,9 @@ if (isset($_POST['Submit']))
     echo $pass1;
     echo $pass2;
     echo "The two passwords do not match";
+    $_SESSION['message'] = "The two passwords do not match";
+    Header("location: registration.php");
+    exit();
   }
   $user_check_query = "SELECT * FROM login WHERE Roll_Number='$roll' LIMIT 1";
   $result = mysqli_query($conn, $user_check_query);

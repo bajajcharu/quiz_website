@@ -12,6 +12,10 @@
       $show_message = $_SESSION['message'];
       $_SESSION['message'] = null;
   }
+  if (isset($show_message)) 
+  {
+      echo "<script>alert('{$show_message}');</script>";
+  }
 
 
 ?>
@@ -78,32 +82,24 @@
             <img class='trichy' src="quizimg/trichylogo.png" width="70px" height="50px"></a>
             
         </div> 
-        <a href='quiz.html'>INFOTREK'21</a>
+        <a href='quiz.html'>ACUMEN'21</a>
             
     <div class="main-block">
-    <form name="RegForm" onsubmit="return validateForm()"  method="POST" action="submit.php">
+    <form name="RegForm"  method="POST" action="submit.php">
       <h1>Register</h1>
       
-     
-        
         <div  class="personal-details">
           <div>
-            <div><input type="text" placeholder='Roll No.'required="Please Enter" name="Roll_Number"></div>
+            <div><input type="phone" placeholder='Roll No.'required="Please Enter" name="Roll_Number"></div>
           </div>
-         
-           
-          </div>
+        </div>
         
-     
-
-     
-        
-          <div  class="contact-details">
+        <div  class="contact-details">
           <div><input type="Password" placeholder='Password' name="Password1" required="Please Make your password"></div>
           <div><input type="Password" placeholder='confirm password' name="Password2" required="Please confirm your password"></div>
         </div>
      
-      <button type="submit" value="send" name="Submit">Submit</button>
+      <button type="submit" value="send" name="Submit" onclick="return rolnumber(document.RegForm.Roll_Number)" >Submit</button>
     </form>
     </div> 
     <footer>

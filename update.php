@@ -1,9 +1,5 @@
 <?php
   session_start();
-        // servername => localhost
-        // username => root
-        // password => empty
-        // database name => staff
         $conn = mysqli_connect("localhost", "root", "", "quizzer1");
           
         // Check connection

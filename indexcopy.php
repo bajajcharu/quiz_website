@@ -56,7 +56,7 @@ if($conn === false){
              </div>  
              
             <div>
-                <a href='quiz.html'>INFOTREK'21</a>
+                <a href='quiz.html'>ACUMEN'21</a>
               
             </div>
 

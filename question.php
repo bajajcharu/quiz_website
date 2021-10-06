@@ -26,7 +26,7 @@
 	if($number==1)
 	$query = "select * from `choices`";
 	else
-	{//$cars2 = array(0,0,0,0,0,0,0,0,0,0,0);
+	{
 		$arrlength=count($_SESSION['cars']);
 		
 		for($x=0;$x<$arrlength;$x++)
@@ -39,18 +39,17 @@
 		  //echo $_SESSION['cars'][$x];
 	   }
 	   $ids = join("','",$_SESSION['cars2']);   
-      // $sql = "SELECT * FROM galleries WHERE id IN ('$ids')";
-
+      
 	  $query = "select * from `choices` where id NOT IN ('$ids')";
 
-	//$query = "select * from `choices` where id <> $selected_choice";
+	
 	}
 	//Get results
 	$choices = $mysqli->query($query) or die($mysqli->error.__LINE__);
 	
  ?>
   <?php 
-  //if browser refresh then login page
+  
 
   $pageWasRefreshed = isset($_SERVER['HTTP_CACHE_CONTROL']) &&($_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0' ||  $_SERVER['HTTP_CACHE_CONTROL'] == 'no-cache');
 
